@@ -1,0 +1,36 @@
+[mysqld]
+# 字符集配置
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+# InnoDB 配置
+innodb_buffer_pool_size = 256M
+innodb_flush_log_at_trx_commit = 2
+
+# 连接配置
+max_connections = 200
+max_connect_errors = 100000
+
+# 日志配置
+slow_query_log = 1
+slow_query_log_file = /var/lib/mysql/mysql-slow.log
+long_query_time = 2
+
+# 二进制日志（MySQL 8.0 兼容配置）
+log-bin = mysql-bin
+binlog_format = ROW
+binlog_expire_logs_seconds = 604800
+
+# 安全配置
+sql_mode = STRICT_TRANS_TABLES,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO
+
+# MySQL 8.0 优化配置
+innodb_use_native_aio = 1
+innodb_flush_method = O_DIRECT
+innodb_file_per_table = 1
+
+[mysql]
+default-character-set = utf8mb4
+
+[client]
+default-character-set = utf8mb4
