@@ -1,3 +1,3 @@
-## 仓库说明
+## Introduce
 
-该仓库是分享基于docker 搭建的常见开发环境，也可以用于生产环境。
+This repository is for sharing common development environments built on Docker, and it can also be used for production environments.
