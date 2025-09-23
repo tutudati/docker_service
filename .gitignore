@@ -1,4 +1,34 @@
+# macOS系统文件
 .DS_Store
+
+# IDE配置文件
 .vscode/
 .idea/
 
+# MongoDB 目录 - 忽略所有文件但保留目录结构
+mongodb/*
+!mongodb/
+!mongodb/.gitkeep
+
+# ELK 目录 - 忽略所有文件但保留目录结构
+elk/*
+!elk/
+!elk/.gitkeep
+
+# MySQL 目录 - 忽略所有文件但保留目录结构
+mysql/*
+!mysql/
+!mysql/.gitkeep
+
+# 如果需要保留特定的配置文件，可以使用以下格式取消忽略
+# 例如：保留docker-compose文件但忽略数据目录
+# !mongodb/docker-compose.yml
+# !elk/docker-compose.yml
+# !elk/README.md
+# !elk/init-dirs.sh
+# !elk/setup-passwords.sh
+# !mysql/docker-compose.yml
+# !mysql/README.md
+# !mysql/init-database.sh
+# !mysql/init-dirs.sh
+# !mysql/test-connection.sh
